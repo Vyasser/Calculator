@@ -1,0 +1,40 @@
+*{
+    font-size: 20px;
+    font-weight: 600;
+}
+body{
+    padding: 0px 15px;
+}
+.secrin{
+    overflow-y: hidden;
+    align-content: space-between;
+    height: 38vh;
+    padding: 30px 15px;
+}
+.btn{
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    align-content: center;
+}
+
+.bottons [class*="col"]{
+    margin: 5px 0px;
+}
+hr{
+    margin: 0 0 20px 0;
+}
+
+#secrin{
+    font-size: 35px;
+}
+.result{
+    color: grey;
+}
+.equal{
+    transition: 0.5s;
+    translate: 0px -130px;
+    font-size: 35px;
+    color: green;
+}

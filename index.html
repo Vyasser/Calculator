@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <link rel="icon" href="icons/calc_icon.png" type="image/png">
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<body>
+    <div class="row justify-content-center text-white">
+        <div class="col-sm-12 col-md-6 col-lg-4 bg-black align-content-end" style="height:fit-content;">
+
+                <div class="row secrin align-self-star">
+                    <div id="secrin" class="row justify-content-end align-content-center" style="display: inline;"></div>
+                    <div id="result" class="row justify-content-end align-content-end result"></div>
+                </div>
+
+                <div class="row  justify-content-between m-0">
+
+                    <div class="collapse collapse-horizontal" id="History" style="width: 50%; height: 100px; overflow: scroll; position: relative;">
+                        
+                    </div>
+
+                    <div class="col-2 btn text-white" style="width: fit-content;" type="button" data-bs-toggle="collapse" data-bs-target="#History" aria-expanded="false" aria-controls="collapseWidthExample">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                            <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                            <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                        </svg>    
+                    </div>
+
+                    <div class="col-2">
+                        <button id="Historic_Cleaning" class="btn" style="font-size: 16px; color: white; position: sticky ; top: 0;">Historic Cleaning</button>
+                    </div>
+
+                    <div id="sup" class="col-2 btn text-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                        <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                        <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
+                        </svg>                    
+                    </div>
+
+                </div>
+            
+            <hr>
+            <div class="row bottons justify-content-center pb-1">
+                <div class="row justify-content-between">
+                    <div id="clear" class="col-2  btn btn-secondary">C</div>
+                    <div id="Brackets" class="col-2  btn btn-secondary">( )</div>
+                    <button class="col-2  btn btn-secondary button" value="%">%</button>
+                    <button class="col-2  btn btn-secondary Operations button" style="background-color: darkgrey;" value="/">/</button>
+                </div>
+                <div class="row justify-content-between"> 
+                    <button id="7" class="col-2 btn btn-secondary bg-dark num button" value="7">7</button>
+                    <button id="8" class="col-2 btn btn-secondary bg-dark num button" value="8">8</button>
+                    <button id="9" class="col-2 btn btn-secondary bg-dark num button" value="9">9</button>
+                    <button class="col-2 btn btn-secondary Operations button" style="background-color: darkgrey;" value="*">x</button>
+                </div>
+                <div class="row justify-content-between"> 
+                    <button id="4" class="col-2 btn btn-secondary bg-dark num button" value="4">4</button>
+                    <button id="5" class="col-2 btn btn-secondary bg-dark num button" value="5">5</button>
+                    <button id="6" class="col-2 btn btn-secondary bg-dark num button" value="6">6</button>
+                    <button class="col-2 btn btn-secondary Operations button" style="background-color: darkgrey;" value="-">-</button>
+                </div>
+                <div class="row justify-content-between"> 
+                    <button id="1" class="col-2 btn btn-secondary bg-dark num button" value="1">1</button>
+                    <button id="2" class="col-2 btn btn-secondary bg-dark num button" value="2">2</button>
+                    <button id="3" class="col-2 btn btn-secondary bg-dark num button" value="3">3</button>
+                    <button class="col-2 btn btn-secondary Operations button" style="background-color: darkgrey;" value="+">+</button>
+                </div>
+                <div class="row justify-content-between"> 
+                    <div id="Negative" class="col-2 btn btn-secondary bg-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-plus-slash-minus" viewBox="0 0 16 16">
+                        <path d="m1.854 14.854 13-13a.5.5 0 0 0-.708-.708l-13 13a.5.5 0 0 0 .708.708M4 1a.5.5 0 0 1 .5.5v2h2a.5.5 0 0 1 0 1h-2v2a.5.5 0 0 1-1 0v-2h-2a.5.5 0 0 1 0-1h2v-2A.5.5 0 0 1 4 1m5 11a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5A.5.5 0 0 1 9 12"/>
+                        </svg>
+                    </div>
+                    <button id="0" class="col-2 btn btn-secondary bg-dark num button" value="0">0</button>
+                    <button class="col-2 btn btn-secondary bg-dark" value=".">.</button>
+                    <div id="equal" class="col-2 btn btn-secondary bg-success">=</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    
+    <script src="JS/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.4.0/math.min.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>
